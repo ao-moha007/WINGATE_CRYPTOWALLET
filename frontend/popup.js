@@ -1,5 +1,5 @@
 //const { Result } = require("ethers");
-import {ethers} from "./chromeapi/node_modules/ethers/dist/ethers.esm.js";
+import {ethers} from "../chromeapi/node_modules/ethers/dist/ethers.esm.js";
 //import { ethers } from "https://cdn.jsdelivr.net/npm/ethers@5.7.2/dist/ethers.esm.min.js";
 console.log(ethers);
 // Runs when the DOM is fully loaded, sets up event listeners for UI interactions
