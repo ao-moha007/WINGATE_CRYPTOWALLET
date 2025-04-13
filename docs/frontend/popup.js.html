@@ -1,4 +1,32 @@
-//const { Result } = require("ethers");
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>JSDoc: Source: popup.js</title>
+
+    <script src="scripts/prettify/prettify.js"> </script>
+    <script src="scripts/prettify/lang-css.js"> </script>
+    <!--[if lt IE 9]>
+      <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+    <link type="text/css" rel="stylesheet" href="styles/prettify-tomorrow.css">
+    <link type="text/css" rel="stylesheet" href="styles/jsdoc-default.css">
+</head>
+
+<body>
+
+<div id="main">
+
+    <h1 class="page-title">Source: popup.js</h1>
+
+    
+
+
+
+    
+    <section>
+        <article>
+            <pre class="prettyprint source linenums"><code>//const { Result } = require("ethers");
 import {ethers} from "../chromeapi/node_modules/ethers/dist/ethers.esm.js";
 //import { ethers } from "https://cdn.jsdelivr.net/npm/ethers@5.7.2/dist/ethers.esm.min.js";
 console.log(ethers);
@@ -610,15 +638,15 @@ function myFunction(){
             if(parseObj.infos.includes(token._id)){
                 console.log("infos : ",parseObj.infos);
                 element +=`
-            <div class="assets_item">
-              <img class="assets_item_img"
+            &lt;div class="assets_item">
+              &lt;img class="assets_item_img"
               src="./assets/theblockchaincoders.png" 
               alt=""  
               />
 
-              <span>${token.address.slice(0,15)}...</span>
-              <span>${token.symbol}</span>
-            </div>
+              &lt;span>${token.address.slice(0,15)}...&lt;/span>
+              &lt;span>${token.symbol}&lt;/span>
+            &lt;/div>
             `;
             }
         });
@@ -637,11 +665,11 @@ function myFunction(){
     .then((data) => {
         let accounts = data.data.accounts.filter(account => parseObj.infos.includes(account._id))
         .map((account, i) => 
-        `<div class="lists">
-          <p>${i + 1}</p>
-          <p class="accountValue" data-address="${account.address}" 
-          data-privateKey="${account.privateKey}">${account.address.slice(0, 15)}...</p>
-        </div>
+        `&lt;div class="lists">
+          &lt;p>${i + 1}&lt;/p>
+          &lt;p class="accountValue" data-address="${account.address}" 
+          data-privateKey="${account.privateKey}">${account.address.slice(0, 15)}...&lt;/p>
+        &lt;/div>
         `
         ).join("");
     
@@ -658,11 +686,11 @@ function myFunction(){
         let temp = ethers.utils.parseEther(activity.amount);
         console.log("amount on ether : ",temp);
         let assetHTML = `
-            <div class="assets_item">
-                <img src="./assets/theblockchaincoders.png" alt="" class="assets_item_img">
-                <span>${activity.receiver}</span> 
-                <span>${activity.amount} MATIC</span> 
-            </div>
+            &lt;div class="assets_item">
+                &lt;img src="./assets/theblockchaincoders.png" alt="" class="assets_item_img">
+                &lt;span>${activity.receiver}&lt;/span> 
+                &lt;span>${activity.amount} MATIC&lt;/span> 
+            &lt;/div>
         `;
         activityElement.innerHTML += assetHTML;
     });
@@ -859,4 +887,26 @@ function addAccountActivity(sender,receiver,amount){
         });
 }
 
-window.onload = myFunction;
+window.onload = myFunction;</code></pre>
+        </article>
+    </section>
+
+
+
+
+</div>
+
+<nav>
+    <h2><a href="index.html">Home</a></h2><h3>Events</h3><ul><li><a href="global.html#event:DOMContentLoaded">DOMContentLoaded</a></li></ul><h3>Global</h3><ul><li><a href="global.html#addAccount">addAccount</a></li><li><a href="global.html#addAccountActivity">addAccountActivity</a></li><li><a href="global.html#addToken">addToken</a></li><li><a href="global.html#addUserActivity">addUserActivity</a></li><li><a href="global.html#changeAccount">changeAccount</a></li><li><a href="global.html#checkBalance">checkBalance</a></li><li><a href="global.html#closeImportModel">closeImportModel</a></li><li><a href="global.html#copyAddress">copyAddress</a></li><li><a href="global.html#createUser">createUser</a></li><li><a href="global.html#getOpenNetwork">getOpenNetwork</a></li><li><a href="global.html#getSelectedNetwork">getSelectedNetwork</a></li><li><a href="global.html#goBack">goBack</a></li><li><a href="global.html#goHomePage">goHomePage</a></li><li><a href="global.html#handler">handler</a></li><li><a href="global.html#importGoBack">importGoBack</a></li><li><a href="global.html#login">login</a></li><li><a href="global.html#loginAccount">loginAccount</a></li><li><a href="global.html#loginView">loginView</a></li><li><a href="global.html#logout">logout</a></li><li><a href="global.html#myFunction">myFunction</a></li><li><a href="global.html#openActivity">openActivity</a></li><li><a href="global.html#openAssets">openAssets</a></li><li><a href="global.html#openCreate">openCreate</a></li><li><a href="global.html#openImport">openImport</a></li><li><a href="global.html#openImportModel">openImportModel</a></li><li><a href="global.html#openTransfer">openTransfer</a></li><li><a href="global.html#setNetwork">setNetwork</a></li><li><a href="global.html#showOnlyDiv">showOnlyDiv</a></li><li><a href="global.html#signUp">signUp</a></li><li><a href="global.html#updateAccountInfos">updateAccountInfos</a></li><li><a href="global.html#updateInfos">updateInfos</a></li></ul>
+</nav>
+
+<br class="clear">
+
+<footer>
+    Documentation generated by <a href="https://github.com/jsdoc/jsdoc">JSDoc 4.0.4</a> on Sun Apr 13 2025 23:02:18 GMT+0200 (Central European Summer Time)
+</footer>
+
+<script> prettyPrint(); </script>
+<script src="scripts/linenumber.js"> </script>
+</body>
+</html>
